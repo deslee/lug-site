@@ -13,7 +13,7 @@ MANAGERS = ADMINS
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
-        'NAME': '/opt/django/utdlug.db',                      # Or path to database file if using sqlite3.
+        'NAME': '/opt/django/utdlug/sqlite.db',                      # Or path to database file if using sqlite3.
         # The following settings are not used with sqlite3:
         'USER': '',
         'PASSWORD': '',
@@ -62,7 +62,7 @@ MEDIA_URL = ''
 # Don't put anything in this directory yourself; store your static files
 # in apps' "static/" subdirectories and in STATICFILES_DIRS.
 # Example: "/var/www/example.com/static/"
-STATIC_ROOT = ''
+STATIC_ROOT = '/opt/django/utdlug/static/'
 
 # URL prefix for static files.
 # Example: "http://example.com/static/", "http://static.example.com/"
@@ -84,7 +84,7 @@ STATICFILES_FINDERS = (
 )
 
 # Make this unique, and don't share it with anybody.
-SECRET_KEY = 'ai)7l($&fo8cj779k=z_aav291^j-iqj0ii2q&%k$h0)^n=&zf'
+SECRET_KEY = '$9%98i&q4x$)catx1tngs(*!dhj-b#8rjt)jwsp)efyy7=ef%#'
 
 # List of callables that know how to import templates from various sources.
 TEMPLATE_LOADERS = (
@@ -112,7 +112,7 @@ TEMPLATE_DIRS = (
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
-    os.path.join(os.path.dirname(os.path.abspath(__file__)), os.pardir, 'templates'),
+    './templates',
 )
 
 INSTALLED_APPS = (
@@ -122,11 +122,11 @@ INSTALLED_APPS = (
     'django.contrib.sites',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'django.contrib.admin',
-    'django.contrib.admindocs',
-		'polls',
     # Uncomment the next line to enable the admin:
+    'django.contrib.admin',
     # Uncomment the next line to enable admin documentation:
+    # 'django.contrib.admindocs',
+    'basiccms',
 )
 
 # A sample logging configuration. The only tangible logging
