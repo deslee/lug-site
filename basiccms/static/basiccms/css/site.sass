@@ -1,0 +1,40 @@
+$body-width: 960px
+$page-background: #383838
+$content-background: #fff
+$page-text: #eee
+$content-text: #3b3b3b
+$sidebar-width: $body-width * .3
+
+@mixin set-width 
+	max-width: $body-width
+	margin: 0 auto
+
+body
+	background: $page-background
+	color: $content-text
+
+nav
+
+header
+	@include set-width
+	h1
+		display: none
+
+#content-wrapper
+	padding: 1em
+	margin: 1em 0
+	background: $content-background
+	color: $content-text
+
+#content
+	@include set-width
+
+#articles
+
+#sidebar
+
+#page-body
+	background-color: white
+	color: #3b3b3b
+img
+	max-width: 100%

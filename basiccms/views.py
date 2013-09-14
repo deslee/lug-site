@@ -15,5 +15,9 @@ def page(request, slug):
 	model = {
 	'title': page.title,
 	'articles': page.article_set.all(),
+	'sidebar': {
+		'title': page.sidebar.title,
+		'elements': page.sidebar.elements.all(),
+	},
 	}
 	return render(request, 'basiccms/basictemplate.html', model)

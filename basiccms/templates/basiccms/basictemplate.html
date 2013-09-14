@@ -2,30 +2,57 @@
 <html>
 <head>
 	<title>{{ title }} - Basic Template</title>
+	<link rel="stylesheet" type="text/css" href="/static/basiccms/css/bootstrap.css" />
+	<link rel="stylesheet" type="text/css" href="/static/basiccms/css/site.css" />
 	<meta charset="utf-8"> 
 </head>
-	<h1>{{ title }}</h1> 
+<body>
+	<div id="container">
 
-	{% if articles %}
-	<section id="articles">
-		{% for article in articles %}
-			<article>
-				<h2>{{ article.title }}</h2>
-				<div>{{ article.content }}</div>
-			</article>
-		{% endfor %}
-	</section>
-	{% endif %}
+	<nav>
+		<p class="col-xs-12 col-sm-3"><a href="http://utdallas.orgsync.com/org/linuxusersgroup/home">Home</a></p>
+		<p class="col-xs-12 col-sm-3"><a href="http://utdallas.orgsync.com/org/linuxusersgroup/members">Members</a></p>
+		<p class="col-xs-12 col-sm-3"><a href="https://orgsync.com/15316/forums">Discussions (Support)</a></p>
+		<p class="col-xs-12 col-sm-3"><a href="http://utdallas.orgsync.com/org/linuxusersgroup/chat">Web Chat</a></p>
+	</nav>
 
+	<header>
+		<img src="http://s3.amazonaws.com/os_extranet_images/228079_original.png" />
+		<h1>{{ title }}</h1> 
+	</header>
 
-	{% if sidebar %}
-	<h2>Sidebar title: {{ sidebar.title }}</h2>
-	<section id="sidebar">
-		{% for element in sidebar.elements %}
-		<section>
-			<h3>{{ element.title }}</h3>
-			<div>{{ element.content }}</div>
+	<section id="content-wrapper"><section id="content" class="row">
+		{% if articles %}
+		<section id="articles" class="col-md-9">
+			{% for article in articles %}
+				<article>
+					<h2>{{ article.title }}</h2>
+					{% autoescape off %}
+					<div>{{ article.content }}</div>
+					{% endautoescape %}
+				</article>
+			{% endfor %}
 		</section>
-		{% endfor %}
-	</section>
-	{% endif %}
+		{% endif %}
+
+
+		{% if sidebar %}
+		<section id="sidebar" class="col-md-3">
+			{% for element in sidebar.elements %}
+			<section>
+				<h3>{{ element.title }}</h3>
+					{% autoescape off %}
+				<div>{{ element.content }}</div>
+					{% endautoescape %}
+			</section>
+			{% endfor %}
+		</section>
+		{% endif %}
+
+	</section></section>
+
+	<script src="/static/basiccms/js/jquery-2.0.3.js"></script>
+	<script src="/static/basiccms/js/bootstrap.js"></script>
+	</div>
+</body>
+</html>
