@@ -12,7 +12,6 @@ class PageAdmin(admin.ModelAdmin):
         (None,		{'fields': ['title']}),
         (None,		{'fields': ['slug']}),
         (None,		{'fields': ['sidebar']}),
-
     ]
     inlines = [ArticleInline]
 

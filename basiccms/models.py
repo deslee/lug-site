@@ -27,3 +27,4 @@ class Article(models.Model):
 	title = models.CharField(max_length=200)
 	content = models.TextField()
 	pub_date = models.DateTimeField('date published')
+	sortorder = models.IntegerField(null=True, blank=True)

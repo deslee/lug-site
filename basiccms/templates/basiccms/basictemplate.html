@@ -9,11 +9,11 @@
 <body>
 	<div id="container">
 
-	<nav>
-		<p class="col-xs-12 col-sm-3"><a href="http://utdallas.orgsync.com/org/linuxusersgroup/home">Home</a></p>
-		<p class="col-xs-12 col-sm-3"><a href="http://utdallas.orgsync.com/org/linuxusersgroup/members">Members</a></p>
-		<p class="col-xs-12 col-sm-3"><a href="https://orgsync.com/15316/forums">Discussions (Support)</a></p>
-		<p class="col-xs-12 col-sm-3"><a href="http://utdallas.orgsync.com/org/linuxusersgroup/chat">Web Chat</a></p>
+	<nav class="row">
+		<a class="col-xs-12 col-sm-3" href="http://utdallas.orgsync.com/org/linuxusersgroup/home">Home</a>
+		<a class="col-xs-12 col-sm-3" href="http://utdallas.orgsync.com/org/linuxusersgroup/members">Members</a>
+		<a class="col-xs-12 col-sm-3" href="https://orgsync.com/15316/forums">Discussions (Support)</a>
+		<a class="col-xs-12 col-sm-3" href="http://utdallas.orgsync.com/org/linuxusersgroup/chat">Web Chat</a>
 	</nav>
 
 	<header>
@@ -51,8 +51,39 @@
 
 	</section></section>
 
+  <!-- Modal -->
+  <div class="modal fade" id="lug-admin-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          <h4 class="modal-title">LUG Admin Login</h4>
+        </div>
+        <div class="modal-body">
+          <form>
+          	<label for="input-admin-user">User</label>
+    		<input type="text" class="form-control" id="input-admin-user" placeholder="Enter user"> <br />
+          	<label for="input-admin-password">Password</label>
+    		<input type="password" class="form-control" id="input-admin-password" placeholder="Enter password">
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          <button type="submit" class="btn btn-primary">Login</button>
+        </div>
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div><!-- /.modal -->
+
 	<script src="/static/basiccms/js/jquery-2.0.3.js"></script>
 	<script src="/static/basiccms/js/bootstrap.js"></script>
+	<script src="/static/basiccms/js/konami.js"></script>
+	<script type="text/javascript">
+		var admin = new Konami();
+		admin.pattern = "7685716568777378";
+		admin.code = function() { $("#lug-admin-modal").modal('show'); }
+		admin.load();
+	</script>
 	</div>
 </body>
 </html>
