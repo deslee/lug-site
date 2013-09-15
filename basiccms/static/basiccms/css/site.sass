@@ -4,9 +4,10 @@ $content-background: #fff
 $page-text: #eee
 $content-text: #3b3b3b
 $sidebar-width: $body-width * .3
+$header-height: 300px
 
-@mixin set-width 
-	max-width: $body-width
+@mixin set-width($modifier: 0)
+	max-width: $body-width + $modifier
 	margin: 0 auto
 
 body
@@ -15,36 +16,64 @@ body
 
 nav
 	background: #111
-	a:link, a:visited, a:active, a:hover
-		padding: .5em 1em
-		text-align:	center
+	ul.row
+		@include set-width
+		padding: 0
+	li
 		display: inline-block
+		text-align:	center
+
+	a:link, a:visited, a:active, a:hover
+		display: block
+		padding: .5em 1em
 		text-decoration: none
 		color: white
 
 	a:hover
 		background: #222
 
-header
-	@include set-width
-	h1
-		display: none
+#header-wrapper
+	header
+		$w-mod: -30
+		padding-bottom: 1em
+		@include set-width($w-mod)
+		height: $header-height
+		color: white
+		h1
+			z-index: 1
+			position: absolute
+			padding: 10px
+			background-color: $page-background
+			opacity: .85
+			width: $body-width + $w-mod
+			text-align: center
+		.carousel
+			height: $header-height
+			.item
+				img
+					height: 100%
+					max-width: 100%
 
 #content-wrapper
 	padding: 1em
-	margin: 1em 0
 	background: $content-background
 	color: $content-text
+	#content
+		@include set-width
 
-#content
-	@include set-width
+#footer-wrapper
+	$height: 2em
+	height: $height
+	line-height: 1.5 * $height
+	footer
+		color: white
+		@include set-width
+		.left
+			text-align: left
+		.middle
+			text-align: center
+		.right
+			text-align: right
 
-#articles
-
-#sidebar
-
-#page-body
-	background-color: white
-	color: #3b3b3b
 img
 	max-width: 100%

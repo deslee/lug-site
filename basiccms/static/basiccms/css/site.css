@@ -4,34 +4,62 @@ body {
 
 nav {
   background: #111111; }
-  nav a:link, nav a:visited, nav a:active, nav a:hover {
-    padding: 0.5em 1em;
-    text-align: center;
+  nav ul.row {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0; }
+  nav li {
     display: inline-block;
+    text-align: center; }
+  nav a:link, nav a:visited, nav a:active, nav a:hover {
+    display: block;
+    padding: 0.5em 1em;
     text-decoration: none;
     color: white; }
   nav a:hover {
     background: #222222; }
 
-header {
-  max-width: 960px;
-  margin: 0 auto; }
-  header h1 {
-    display: none; }
+#header-wrapper header {
+  padding-bottom: 1em;
+  max-width: 930px;
+  margin: 0 auto;
+  height: 300px;
+  color: white; }
+  #header-wrapper header h1 {
+    z-index: 1;
+    position: absolute;
+    padding: 10px;
+    background-color: #383838;
+    opacity: 0.85;
+    width: 930px;
+    text-align: center; }
+  #header-wrapper header .carousel {
+    height: 300px; }
+    #header-wrapper header .carousel .item img {
+      height: 100%;
+      max-width: 100%; }
 
 #content-wrapper {
   padding: 1em;
-  margin: 1em 0;
   background: white;
   color: #3b3b3b; }
+  #content-wrapper #content {
+    max-width: 960px;
+    margin: 0 auto; }
 
-#content {
-  max-width: 960px;
-  margin: 0 auto; }
-
-#page-body {
-  background-color: white;
-  color: #3b3b3b; }
+#footer-wrapper {
+  height: 2em;
+  line-height: 3em; }
+  #footer-wrapper footer {
+    color: white;
+    max-width: 960px;
+    margin: 0 auto; }
+    #footer-wrapper footer .left {
+      text-align: left; }
+    #footer-wrapper footer .middle {
+      text-align: center; }
+    #footer-wrapper footer .right {
+      text-align: right; }
 
 img {
   max-width: 100%; }

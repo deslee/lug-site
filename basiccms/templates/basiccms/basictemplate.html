@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>{{ title }} - Basic Template</title>
+	<title>{{ title }}</title>
 	<link rel="stylesheet" type="text/css" href="/static/basiccms/css/bootstrap.css" />
 	<link rel="stylesheet" type="text/css" href="/static/basiccms/css/site.css" />
 	<meta charset="utf-8"> 
@@ -9,19 +9,52 @@
 <body>
 	<div id="container">
 
-	<nav class="row">
-		<a class="col-xs-12 col-sm-3" href="http://utdallas.orgsync.com/org/linuxusersgroup/home">Home</a>
-		<a class="col-xs-12 col-sm-3" href="http://utdallas.orgsync.com/org/linuxusersgroup/members">Members</a>
-		<a class="col-xs-12 col-sm-3" href="https://orgsync.com/15316/forums">Discussions (Support)</a>
-		<a class="col-xs-12 col-sm-3" href="http://utdallas.orgsync.com/org/linuxusersgroup/chat">Web Chat</a>
+	<nav>
+		<ul class="row">
+			<li class="col-xs-12 col-sm-3"><a href="/">Home</a></li>
+			<li class="col-xs-12 col-sm-3"><a href="/members">Members</a></li>
+			<li class="col-xs-12 col-sm-3"><a href="https://orgsync.com/15316/forums">Discussions (Support)</a></li>
+			<li class="col-xs-12 col-sm-3"><a href="/chat">Web Chat</a></li>
+		</ul>
 	</nav>
 
-	<header>
-		<img src="http://s3.amazonaws.com/os_extranet_images/228079_original.png" />
-		<h1>{{ title }}</h1> 
-	</header>
+	<div id="header-wrapper"><header>
+		<h1>{{ title }}</h1>
+		<div id="carousel-example-generic" class="carousel slide">
+		  <!-- Wrapper for slides -->		
+		  <div class="carousel-inner">
+		    <div class="item active">
+		      <img src="http://lorempixel.com/930/300/technics/6" alt="...">
+		      <div class="carousel-caption">
+		        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+		      </div>
+		    </div>
+		    <div class="item">
+		      <img src="http://lorempixel.com/930/300/technics/4" alt="...">
+		      <div class="carousel-caption">
+		        Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+		      </div>
+		    </div>
+		    <div class="item">
+		      <img src="http://lorempixel.com/930/300/technics/3" alt="...">
+		      <div class="carousel-caption">
+		        No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself.
+		      </div>
+		    </div>
+		  </div>
 
-	<section id="content-wrapper"><section id="content" class="row">
+		  <!-- Controls -->
+		  <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+		    <span class="icon-prev"></span>
+		  </a>
+		  <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+		    <span class="icon-next"></span>
+		  </a>
+		</div>
+
+	</header></div>
+
+	<div id="content-wrapper"><div id="content" class="row">
 		{% if articles %}
 		<section id="articles" class="col-md-9">
 			{% for article in articles %}
@@ -37,7 +70,7 @@
 
 
 		{% if sidebar %}
-		<section id="sidebar" class="col-md-3">
+		<div id="sidebar" class="col-md-3">
 			{% for element in sidebar.elements %}
 			<section>
 				<h3>{{ element.title }}</h3>
@@ -46,11 +79,22 @@
 					{% endautoescape %}
 			</section>
 			{% endfor %}
-		</section>
+		</div>
 		{% endif %}
 
-	</section></section>
+	</div></div>
 
+	<div id="footer-wrapper"><footer class="row">
+		<div class="left col-xs-4">
+			<span>Linux Users Group at UTD</span>
+		</div>
+		<div class="middle col-xs-4">
+			<span>Linux Users Group at UTD</span>
+		</div>
+		<div class="right col-xs-4">
+			<span>Linux Users Group at UTD</span>
+		</div>
+	</footer></div>
   <!-- Modal -->
   <div class="modal fade" id="lug-admin-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog">
@@ -83,6 +127,7 @@
 		admin.pattern = "7685716568777378";
 		admin.code = function() { $("#lug-admin-modal").modal('show'); }
 		admin.load();
+		$('.carousel').carousel();
 	</script>
 	</div>
 </body>
