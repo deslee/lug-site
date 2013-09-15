@@ -56,7 +56,11 @@
 
 	<div id="content-wrapper"><div id="content" class="row">
 		{% if articles %}
+		{% if sidebar %}
 		<section id="articles" class="col-md-9">
+		{% else %}
+		<section id="articles" class="col-md-12">
+		{% endif %}
 			{% for article in articles %}
 				<article>
 					<h2>{{ article.title }}</h2>
@@ -73,7 +77,7 @@
 		<div id="sidebar" class="col-md-3">
 			{% for element in sidebar.elements %}
 			<section>
-				<h3>{{ element.title }}</h3>
+				<h3>{{ element.title }}:</h3>
 					{% autoescape off %}
 				<div>{{ element.content }}</div>
 					{% endautoescape %}

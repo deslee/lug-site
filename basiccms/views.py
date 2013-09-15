@@ -14,11 +14,13 @@ def page(request, slug):
 	return render(request, 'basiccms/basictemplate.html', model_from_page(page))
 
 def model_from_page(page):
-	return {
+	model = {
 		'title': page.title,
 		'articles': page.article_set.order_by('sortorder', '-pub_date').all(),
-		'sidebar': {
+	}
+	if (page.sidebar):
+		model['sidebar'] =  {
 			'title': page.sidebar.title,
 			'elements': page.sidebar.elements.all(),
-		},
-	}
+		}
+	return model	

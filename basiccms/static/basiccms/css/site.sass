@@ -1,21 +1,46 @@
 $body-width: 960px
-$page-background: #383838
-$content-background: #fff
+$flameorange: #C75B12
+$solarorange: #E98300
+$sparkorange: #FFB612
+$ecogreen: #008542
+$saplinggreen: #69BE28
+$skyblue: #5BC6E8
+$gray10: #766A62
+$gray4: #B7B1A9
+$gray6: #A59D95
+$gray8: #8B8178
+$gray2: #D5D2CA
 $page-text: #eee
 $content-text: #3b3b3b
 $sidebar-width: $body-width * .3
 $header-height: 300px
 
+@mixin gradient($c1, $c2, $c3)
+	background-image: linear-gradient(top, $c1 26%, $c2 63%, $c3 86%)
+	background-image: -o-linear-gradient(top, $c1 26%, $c2 63%, $c3 86%)
+	background-image: -moz-linear-gradient(top, $c1 26%, $c2 63%, $c3 86%)
+	background-image: -webkit-linear-gradient(top, $c1 26%, $c2 63%, $c3 86%)
+	background-image: -ms-linear-gradient(top, $c1 26%, $c2 63%, $c3 86%)
+
+	background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0.26, $c1),color-stop(0.63, $c2),color-stop(0.86, $c3))
+
 @mixin set-width($modifier: 0)
 	max-width: $body-width + $modifier
 	margin: 0 auto
 
+a:link, a:visited, a:active
+	color: $ecogreen
+a:hover
+	color: $flameorange
+h1,h2,h3,h4,h5,h6
+	color: $ecogreen
+
 body
-	background: $page-background
+	background: $solarorange
 	color: $content-text
 
 nav
-	background: #151515
+	background: $ecogreen
 	ul.row
 		@include set-width
 		padding: 0
@@ -28,9 +53,8 @@ nav
 		padding: .5em 1em
 		text-decoration: none
 		color: white
-
 	a:hover
-		background: #252525
+		background: $saplinggreen
 
 #header-wrapper
 	header
@@ -40,10 +64,11 @@ nav
 		height: $header-height
 		color: white
 		h1
+			color: white
 			z-index: 1
 			position: absolute
 			padding: 10px
-			background-color: $page-background
+			background-color: $gray10
 			opacity: .85
 			width: $body-width + $w-mod
 			text-align: center
@@ -55,15 +80,16 @@ nav
 					max-width: 100%
 
 #content-wrapper
-	padding: 1em
-	background: $content-background
+	@include gradient($solarorange, $sparkorange, $sparkorange)
 	color: $content-text
 	#content
-		@include set-width
+		padding: 1em
+		background: white
+		@include set-width(-30)
 
 #footer-wrapper
 	line-height: 3em
-	background: #151515
+	background: $ecogreen
 	footer
 		color: white
 		@include set-width
@@ -73,6 +99,10 @@ nav
 			text-align: center
 		.right
 			text-align: right
+
+#sidebar
+	.email
+		font-size: .8em
 
 img
 	max-width: 100%
