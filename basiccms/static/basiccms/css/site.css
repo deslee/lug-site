@@ -3,7 +3,7 @@ body {
   color: #3b3b3b; }
 
 nav {
-  background: #111111; }
+  background: #151515; }
   nav ul.row {
     max-width: 960px;
     margin: 0 auto;
@@ -17,7 +17,7 @@ nav {
     text-decoration: none;
     color: white; }
   nav a:hover {
-    background: #222222; }
+    background: #252525; }
 
 #header-wrapper header {
   padding-bottom: 1em;
@@ -48,8 +48,8 @@ nav {
     margin: 0 auto; }
 
 #footer-wrapper {
-  height: 2em;
-  line-height: 3em; }
+  line-height: 3em;
+  background: #151515; }
   #footer-wrapper footer {
     color: white;
     max-width: 960px;
