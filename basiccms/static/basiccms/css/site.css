@@ -1,18 +1,19 @@
 a:link, a:visited, a:active {
-  color: #008542; }
+  color: #c75b12; }
 
 a:hover {
-  color: #c75b12; }
+  color: #e98300; }
 
 h1, h2, h3, h4, h5, h6 {
   color: #008542; }
 
 body {
-  background: #e98300;
+  background: #ffb612;
   color: #3b3b3b; }
 
 nav {
-  background: #008542; }
+  background: #008542;
+  border-bottom: 1px solid black; }
   nav ul.row {
     max-width: 960px;
     margin: 0 auto;
@@ -26,9 +27,12 @@ nav {
     text-decoration: none;
     color: white; }
   nav a:hover {
-    background: #008542; }
+    background: #69be28; }
 
 #header-wrapper header {
+  border-style: solid;
+  border-width: 0 1px;
+  border-color: black;
   padding-bottom: 1em;
   max-width: 930px;
   margin: 0 auto;
@@ -50,14 +54,17 @@ nav {
       max-width: 100%; }
 
 #content-wrapper {
-  background-image: linear-gradient(top, #e98300 26%, #ffb612 63%, #ffb612 86%);
-  background-image: -o-linear-gradient(top, #e98300 26%, #ffb612 63%, #ffb612 86%);
-  background-image: -moz-linear-gradient(top, #e98300 26%, #ffb612 63%, #ffb612 86%);
-  background-image: -webkit-linear-gradient(top, #e98300 26%, #ffb612 63%, #ffb612 86%);
-  background-image: -ms-linear-gradient(top, #e98300 26%, #ffb612 63%, #ffb612 86%);
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0.26, #e98300), color-stop(0.63, #ffb612), color-stop(0.86, #ffb612));
+  background-image: linear-gradient(top, #ffb612 26%, #e98300 63%, #e98300 86%);
+  background-image: -o-linear-gradient(top, #ffb612 26%, #e98300 63%, #e98300 86%);
+  background-image: -moz-linear-gradient(top, #ffb612 26%, #e98300 63%, #e98300 86%);
+  background-image: -webkit-linear-gradient(top, #ffb612 26%, #e98300 63%, #e98300 86%);
+  background-image: -ms-linear-gradient(top, #ffb612 26%, #e98300 63%, #e98300 86%);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0.26, #ffb612), color-stop(0.63, #e98300), color-stop(0.86, #e98300));
   color: #3b3b3b; }
   #content-wrapper #content {
+    border-style: solid;
+    border-width: 0 1px;
+    border-color: black;
     padding: 1em;
     background: white;
     max-width: 930px;
