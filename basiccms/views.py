@@ -1,4 +1,5 @@
 from django.http import HttpResponse 
+from django.conf import settings
 from basiccms.models import Page
 from django.shortcuts import render, get_object_or_404, redirect
 
@@ -17,6 +18,7 @@ def model_from_page(page):
 	model = {
 		'title': page.title,
 		'articles': page.article_set.order_by('sortorder', '-pub_date').all(),
+		'loginurl': settings.CMS['loginurl'],
 	}
 	if (page.sidebar):
 		model['sidebar'] =  {

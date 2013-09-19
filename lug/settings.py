@@ -157,3 +157,8 @@ LOGGING = {
         },
     }
 }
+
+CMS = {
+    'name': "Linux Users Group at UTD",
+    'loginurl': "/lugluglug/",
+}

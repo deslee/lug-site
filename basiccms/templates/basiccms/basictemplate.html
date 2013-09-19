@@ -119,18 +119,20 @@
           <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
           <h4 class="modal-title">LUG Admin Login</h4>
         </div>
+        <form action="{{ loginurl }}" method="post" id="login-form">{% csrf_token %}
         <div class="modal-body">
-          <form>
-          	<label for="input-admin-user">User</label>
-    		<input type="text" class="form-control" id="input-admin-user" placeholder="Enter user"> <br />
-          	<label for="input-admin-password">Password</label>
-    		<input type="password" class="form-control" id="input-admin-password" placeholder="Enter password">
-          </form>
+          	<label for="id_username" class="required">User</label>
+    		<input name="username" type="text" class="form-control" id="id_username" placeholder="Enter user"> <br />
+          	<label for="id_password">Password</label>
+    		<input name="password" type="password" class="form-control" id="id_password" placeholder="Enter password">
+		<input type="hidden" name="this_is_the_login_form" value="1" />
+		<input type="hidden" name="next" value="/lugluglug/" />
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
           <button type="submit" class="btn btn-primary">Login</button>
         </div>
+        </form>
       </div><!-- /.modal-content -->
     </div><!-- /.modal-dialog -->
   </div><!-- /.modal -->
