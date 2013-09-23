@@ -46,7 +46,8 @@ nav {
     width: 930px;
     text-align: center; }
   #header-wrapper header .carousel {
-    height: 300px; }
+    height: 300px;
+    overflow: hidden; }
     #header-wrapper header .carousel .item img {
       height: 100%;
       max-width: 100%; }
