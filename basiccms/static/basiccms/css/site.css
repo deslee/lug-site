@@ -48,6 +48,8 @@ nav {
   #header-wrapper header .carousel {
     height: 300px;
     overflow: hidden; }
+    #header-wrapper header .carousel a.carousel-control {
+      color: #d5d2ca; }
     #header-wrapper header .carousel .item img {
       height: 100%;
       max-width: 100%; }
