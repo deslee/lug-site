@@ -8,7 +8,7 @@ h1, h2, h3, h4, h5, h6 {
   color: #008542; }
 
 body {
-  background: #ffb612;
+  background: #ffce5f;
   color: #3b3b3b; }
 
 nav {
@@ -54,12 +54,7 @@ nav {
       max-width: 100%; }
 
 #content-wrapper {
-  background-image: linear-gradient(top, #ffb612 26%, #e98300 63%, #e98300 86%);
-  background-image: -o-linear-gradient(top, #ffb612 26%, #e98300 63%, #e98300 86%);
-  background-image: -moz-linear-gradient(top, #ffb612 26%, #e98300 63%, #e98300 86%);
-  background-image: -webkit-linear-gradient(top, #ffb612 26%, #e98300 63%, #e98300 86%);
-  background-image: -ms-linear-gradient(top, #ffb612 26%, #e98300 63%, #e98300 86%);
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0.26, #ffb612), color-stop(0.63, #e98300), color-stop(0.86, #e98300));
+  /*@include gradient($page-background, $solarorange, $solarorange) */
   color: #3b3b3b; }
   #content-wrapper #content {
     border-style: solid;
@@ -84,8 +79,9 @@ nav {
     #footer-wrapper footer .right {
       text-align: right; }
 
-#sidebar .email {
-  font-size: 0.8em; }
+#sidebar ul {
+  padding-left: 0;
+  list-style-type: none; }
 
 img {
   max-width: 100%; }
