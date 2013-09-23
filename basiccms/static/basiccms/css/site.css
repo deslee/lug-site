@@ -12,8 +12,7 @@ body {
   color: #3b3b3b; }
 
 nav {
-  background: #008542;
-  border-bottom: 1px solid black; }
+  background: #008542; }
   nav ul.row {
     max-width: 960px;
     margin: 0 auto;
