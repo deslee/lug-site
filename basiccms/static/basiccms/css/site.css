@@ -30,9 +30,7 @@ nav {
     background: #69be28; }
 
 #header-wrapper header {
-  border-style: solid;
-  border-width: 0 1px;
-  border-color: black;
+  border: 0;
   padding-bottom: 1em;
   max-width: 930px;
   margin: 0 auto;
@@ -57,9 +55,7 @@ nav {
   /*@include gradient($page-background, $solarorange, $solarorange) */
   color: #3b3b3b; }
   #content-wrapper #content {
-    border-style: solid;
-    border-width: 0 1px;
-    border-color: black;
+    border: 0;
     padding: 1em;
     background: white;
     max-width: 930px;
