@@ -10,7 +10,7 @@ $gray4: #B7B1A9
 $gray6: #A59D95
 $gray8: #8B8178
 $gray2: #D5D2CA
-$page-background: lighten(desaturate($sparkorange, 0%), 15%)
+$page-background: $sparkorange
 $page-text: #eee
 $content-text: #3b3b3b
 $sidebar-width: $body-width * .3
@@ -89,7 +89,7 @@ nav
 					max-width: 100%
 
 #content-wrapper
-	/*@include gradient($page-background, $solarorange, $solarorange)*/
+	@include gradient($sparkorange, $sparkorange, $solarorange)
 	color: $content-text
 	#content
 		@include site-border

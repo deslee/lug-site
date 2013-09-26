@@ -12,7 +12,8 @@ body {
   color: #3b3b3b; }
 
 nav {
-  background: #008542; }
+  background: #008542;
+  border-bottom: 1px solid black; }
   nav ul.row {
     max-width: 960px;
     margin: 0 auto;
@@ -29,7 +30,9 @@ nav {
     background: #69be28; }
 
 #header-wrapper header {
-  border: 0;
+  border-style: solid;
+  border-width: 0 1px;
+  border-color: black;
   padding-bottom: 1em;
   max-width: 930px;
   margin: 0 auto;
@@ -40,38 +43,36 @@ nav {
     z-index: 1;
     position: absolute;
     padding: 10px;
-    margin: 0;
     background-color: #766a62;
     opacity: 0.85;
     width: 930px;
     text-align: center; }
   #header-wrapper header .carousel {
-    height: 300px;
-    overflow: hidden; }
-    #header-wrapper header .carousel a.carousel-control {
-      color: #d5d2ca; }
+    height: 300px; }
     #header-wrapper header .carousel .item img {
       height: 100%;
       max-width: 100%; }
 
 #content-wrapper {
-  background-image: linear-gradient(top, #ffb612 26%, #ffb612 63%, #e98300 86%);
-  background-image: -o-linear-gradient(top, #ffb612 26%, #ffb612 63%, #e98300 86%);
-  background-image: -moz-linear-gradient(top, #ffb612 26%, #ffb612 63%, #e98300 86%);
-  background-image: -webkit-linear-gradient(top, #ffb612 26%, #ffb612 63%, #e98300 86%);
-  background-image: -ms-linear-gradient(top, #ffb612 26%, #ffb612 63%, #e98300 86%);
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0.26, #ffb612), color-stop(0.63, #ffb612), color-stop(0.86, #e98300));
+  background-image: linear-gradient(top, #ffb612 26%, #e98300 63%, #e98300 86%);
+  background-image: -o-linear-gradient(top, #ffb612 26%, #e98300 63%, #e98300 86%);
+  background-image: -moz-linear-gradient(top, #ffb612 26%, #e98300 63%, #e98300 86%);
+  background-image: -webkit-linear-gradient(top, #ffb612 26%, #e98300 63%, #e98300 86%);
+  background-image: -ms-linear-gradient(top, #ffb612 26%, #e98300 63%, #e98300 86%);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0.26, #ffb612), color-stop(0.63, #e98300), color-stop(0.86, #e98300));
   color: #3b3b3b; }
   #content-wrapper #content {
-    border: 0;
+    border-style: solid;
+    border-width: 0 1px;
+    border-color: black;
     padding: 1em;
     background: white;
     max-width: 930px;
     margin: 0 auto; }
 
 #footer-wrapper {
-  line-height: 2em;
-  background: #e98300; }
+  line-height: 3em;
+  background: #008542; }
   #footer-wrapper footer {
     color: white;
     max-width: 960px;
@@ -83,9 +84,8 @@ nav {
     #footer-wrapper footer .right {
       text-align: right; }
 
-#sidebar ul {
-  padding-left: 0;
-  list-style-type: none; }
+#sidebar .email {
+  font-size: 0.8em; }
 
 img {
   max-width: 100%; }
